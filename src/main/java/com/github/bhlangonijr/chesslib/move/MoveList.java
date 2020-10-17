@@ -563,7 +563,7 @@ public class MoveList extends LinkedList<Move> implements List<Move> {
                 if (strMove.trim().equals("")) {
                     continue;
                 }
-                addSanMove(strMove);
+                addSanMove(strMove, false, true);
             }
         } catch (MoveConversionException e1) {
             throw e1;
