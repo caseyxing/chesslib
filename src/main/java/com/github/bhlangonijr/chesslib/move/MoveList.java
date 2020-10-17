@@ -122,7 +122,7 @@ public class MoveList extends LinkedList<Move> implements List<Move> {
      *
      * @return the board
      */
-    protected static Board getBoard() {
+    public static Board getBoard() {
         return boardHolder.get();
     }
 
