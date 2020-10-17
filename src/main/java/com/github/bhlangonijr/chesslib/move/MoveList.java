@@ -584,7 +584,7 @@ public class MoveList extends LinkedList<Move> implements List<Move> {
     /*
      * encode san to move
      */
-    protected Move encodeSanToMove(Board board, String san, Side side) throws MoveConversionException {
+    public Move encodeSanToMove(Board board, String san, Side side) throws MoveConversionException {
 
         if (san.equalsIgnoreCase("Z0")) {
             return nullMove;
