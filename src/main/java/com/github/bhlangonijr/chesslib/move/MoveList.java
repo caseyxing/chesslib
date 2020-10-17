@@ -738,6 +738,11 @@ public class MoveList extends LinkedList<Move> implements List<Move> {
         if (!b.getFen().equals(getStartFen())) {
             b.loadFromFen(getStartFen());
         }
+
+        if (atMoveIndex == 0) {
+            return getStartFen();
+        }
+
         int i = 0;
         for (Move move : this) {
             i++;
@@ -749,6 +754,7 @@ public class MoveList extends LinkedList<Move> implements List<Move> {
                 return b.getFen(includeCounters);
             }
         }
+
         return null;
     }
 
