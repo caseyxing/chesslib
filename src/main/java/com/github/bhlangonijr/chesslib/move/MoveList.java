@@ -105,6 +105,10 @@ public class MoveList extends LinkedList<Move> implements List<Move> {
      */
     public MoveList(String initialFEN) {
         this.startFEN = initialFEN;
+        final Board b = getBoard();
+        if (!b.getFen().equals(getStartFen())) {
+            b.loadFromFen(getStartFen());
+        }
     }
 
     /**
